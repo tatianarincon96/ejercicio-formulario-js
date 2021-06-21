@@ -9,9 +9,9 @@ registerBtn.addEventListener("click", () => {
   const contraseña = document.querySelector("#password-input");
   contraseña.value; 
   // 3. Obtenemos el valor del input radio
-  const radio = document.querySelectorAll(".age-input");
+  const radioOptions = document.querySelectorAll(".age-input");
   const options = [];
-  radio.forEach(option => {
+  radioOptions.forEach(option => {
     options.push(option.checked);
   });
   // 4. Obtenemos el valor del input checkbox
