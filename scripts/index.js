@@ -7,7 +7,7 @@ registerBtn.addEventListener("click", () => {
   email.value;
   // 2. Obtenemos los datos ingresados en el input de password
   const contraseña = document.querySelector("#password-input");
-  contraseña.value; 
+  contraseña.value;
   // 3. Obtenemos el valor del input radio
   const radioOptions = document.querySelectorAll(".age-input");
   const options = [];
@@ -37,17 +37,19 @@ registerBtn.addEventListener("click", () => {
   }
   // 7 Si todo esta correcto, mostramos por consola un objeto con la información
   // ingresada por el usuario.
-  const informacionUsuario = [];
+  const informacionUsuario = {
+    email: "",
+    password: "",
+    legalAge: false,
+    tycAccepted: false
+  };
+
   function infoUsuario() {
     if (esMayorDeEdad() && aceptoTyC()) {
-      informacionUsuario.push(
-        {
-          email:`${email.value}`,
-          password: `${contraseña.value}`,
-          legalAge: options[0],
-          tycAccepted: checkbox.checked
-        }
-      );
+      informacionUsuario.email = email.value;
+      informacionUsuario.password = contraseña.value;
+      informacionUsuario.legalAge = true;
+      informacionUsuario.tycAccepted = true;
     }
   }
   infoUsuario();
