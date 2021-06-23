@@ -51,7 +51,7 @@ registerBtn.addEventListener("click", () => {
       informacionUsuario.legalAge = true;
       informacionUsuario.tycAccepted = true;
     }
+    console.log(informacionUsuario);
   }
   infoUsuario();
-  console.log(informacionUsuario);
 });
